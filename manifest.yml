@@ -1,0 +1,10 @@
+---
+applications:
+  - name: greeting-server
+    path: ./build/libs/greeting-server.jar
+    routes:
+      - route: greeting-server-vincent.cfapps.io
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+    services:
+      - clearDBMySQL
