@@ -16,7 +16,8 @@ public class GreetingController {
     private List<Greeting> greetings = Arrays.asList(
             new Greeting(1L, "Message 1"),
             new Greeting(2L, "Message 2"),
-            new Greeting(3L, "Message 3")
+            new Greeting(3L, "Message 3"),
+            new Greeting(4L, "Message 4")
     );
 
     @GetMapping("api/v1/greetings")
