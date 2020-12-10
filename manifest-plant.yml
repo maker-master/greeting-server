@@ -1,0 +1,14 @@
+---
+applications:
+  - name: plant-server
+    path: ./applications/plant-server/build/libs/plant-server.jar
+    routes:
+      - route: plant-server-vincent.cfapps.io
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+      GREETING_SERVER_ENDPOINT: 'https://greeting-server'
+      APPLICATION_OAUTH_ENABLED: false
+    services:
+      - plant-database
+      - greeter-service-registry
+      - greeter-circuit-breaker-dashboard

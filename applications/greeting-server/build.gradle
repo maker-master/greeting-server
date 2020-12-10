@@ -1,0 +1,5 @@
+apply from: "$projectDir/../server.gradle"
+
+bootRun.environment([
+        "SPRING_DATASOURCE_URL":"jdbc:mysql://localhost:3306/greeter_greeting_dev?user=greeter&useSSL=false&useTimezone=true&serverTimezone=UTC&useLegacyDatetimeCode=false",
+])

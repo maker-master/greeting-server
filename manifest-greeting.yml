@@ -1,0 +1,12 @@
+---
+applications:
+  - name: greeting-server
+    path: ./applications/greeting-server/build/libs/greeting-server.jar
+    routes:
+      - route: greeting-server-vincent.cfapps.io
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
+      APPLICATION_OAUTH_ENABLED: false
+    services:
+      - greeting-database
+      - greeter-service-registry

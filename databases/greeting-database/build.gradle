@@ -1,0 +1,6 @@
+databases {
+    devDatabase = "greeter_greeting_dev"
+    testDatabase = "greeter_greeting_test"
+    cfDatabase = "greeting-database"
+    cfApp = "greeting-server"
+}

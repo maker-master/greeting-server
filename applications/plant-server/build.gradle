@@ -1,0 +1,10 @@
+apply from: "$projectDir/../server.gradle"
+
+dependencies {
+    compile "com.netflix.hystrix:hystrix-javanica:1.5.18"
+    compile "io.pivotal.spring.cloud:spring-cloud-services-starter-circuit-breaker"
+}
+
+bootRun.environment([
+        "SPRING_DATASOURCE_URL":"jdbc:mysql://localhost:3306/greeter_plant_dev?user=greeter&useSSL=false&useTimezone=true&serverTimezone=UTC&useLegacyDatetimeCode=false",
+])

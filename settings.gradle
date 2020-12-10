@@ -1,1 +1,10 @@
-rootProject.name = 'greeting-server'
+rootProject.name = 'plant-greeter'
+
+include "applications:greeting-server"
+include "applications:plant-server"
+
+include "databases:greeting-database"
+include "databases:plant-database"
+
+include "platform-services:eureka-server"
+include "platform-services:oauth-server"

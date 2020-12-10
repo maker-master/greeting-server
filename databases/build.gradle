@@ -1,0 +1,7 @@
+import io.plantgreeter.gradlebuild.CfMigrationPlugin
+import io.plantgreeter.gradlebuild.LocalMigrationPlugin
+
+subprojects {
+    apply plugin: LocalMigrationPlugin
+    apply plugin: CfMigrationPlugin
+}
